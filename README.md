@@ -14,7 +14,7 @@ Application layer nodes created after the NAT Gateway is ready and firewall rule
 
 **Layer3**
 
-Database layer nodes are created after provisioning of persistent storage.Data disks are attached to the launched instances and using script mountformat.sh , mounted and formatted using the XFS.
+Database layer nodes are created after provisioning of persistent storage.Data disks are attached to the launched instances and using script mountpersistentdisk.sh , mounted and formatted.
 
 
 **Variables**
@@ -23,7 +23,7 @@ The variables needed to run the script:
 
 **account__file** -- Credentials.json
 
-**project_name** -- project name from GCE Project
+**project_name** -- project name from **flipkart-314016**
 
 **region_name** -- region in which to launch the stack (uscentral1)
 
