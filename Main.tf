@@ -21,6 +21,13 @@ resource "google_compute_address" "nataddress" {
 	name = "nat${count.index}address"
 }
 
+#Provision the static IPs for bastionbox
+resource "google_compute_address" "bastionaddress" {
+	count = "1"
+	name = "bast${count.index}address"
+}
+
+
 #Create the firewalls for the layered net ssh access
 resource "google_compute_firewall" "ssh" {
 	name = "sshwall"
