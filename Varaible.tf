@@ -7,23 +7,49 @@ variable "region" {
 variable "vpc-name" {
   default = "vpc-tf-1"
 }
-variable "subnets" {
-  type = list(string)
-  default = ["subnet1-a", "subnet1-b", "subnet1-c", "subnet1-d"]
-  description = "Subnet Names"
+
+variable "external_net" {
+default =""
 }
-variable "cidr-ranges" {
-  type = list(string)
-  default = ["10.128.1.0/24", "10.128.2.0/24", "10.128.3.0/24", "10.186.1.0/24"]
+variable "internal_net" {
+  default =""  
 }
-variable "subnet-regions" {
-  type = list(string)
-  default = ["us-central1", "us-east1", "us-west1", "europe-central2"]
+variable "iprange" {
+  default=""
+  }
+variable "layer1type" {
+	default = {
+		gce = "g1-small"
+		
+	}
 }
-variable "instances" {
-  type = list(string)
-  default = ["instance-1", "instance-2", "instance-3"]
+
+variable "layer2type" {
+	default = {
+		gce = "g1-small"
+		
+	}
 }
-variable "defzone" {
-  default = "b"
+
+variable "layer3type" {
+	default = {
+		gce = "g1-small"
+		
+	}
+}
+
+variable "azones" {
+	default = {
+		zon0 = "us-central1-a"
+		zon1 = "us-central1-b"
+		zon2 = "us-central1-f"
+	}
+}
+
+variable "ezones" {
+	default = {
+		zon0 = "asia-east1-a"
+		zon1 = "asia-east1-b"
+		zon2 = "asia-east1-c"
+	}
 }
