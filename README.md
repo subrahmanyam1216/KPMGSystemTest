@@ -42,12 +42,17 @@ Set the size/type of instances to launch for each particular group of instances.
 Three scripts are provided to aid in the setup of the instances before configuration.
 
 setnat.sh - makes the required changes to the NATGateway instance to allow ip forwarding.
+
 mountpersistentdisk.sh - mounts and formats the persistent storage disks of the database nodes.
+
 setfire.sh - for configuration management (ansible) to be able to use ssh pipeline mode and allow protocol forwarding from the bastion node to the rest of the hosts.
 
 
-Usages:
+**Usages:**
 terrafrom init
+
 terraform validate
+
 terraform Plan
+
 terraform apply
