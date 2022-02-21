@@ -1,5 +1,5 @@
 variable "project" {
-  default = "flipkart-314016"
+  default = "GCE Project"
 }
 variable "region" {
   default = "us-central1"
