@@ -23,11 +23,11 @@ The variables needed to run the script:
 
 account__file -- Credentials.json
 
-project_name -- project name from GCE dashboard
+project_name -- project name from GCE Project
 
 region_name -- region in which to launch the stack (uscentral1)
 
-network_name -- Name of the network to launch instances in
+network_name -- Name of the network is vpc-tf-1
 
 internal_net -- Internal network subnet range eg 192.168.10.0/16
 
